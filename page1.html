@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.avatar {
+  vertical-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email],select, emailarea{
+width: 50%;
+padding:12px;
+border:1px solid #ccc;
+margin-top:6px;
+margin-bottom:16px;
+resize: horizontal;
+}
+input[type=tel],select,telarea{
+width:50%;
+padding:12px;
+border:1px solid #ccc;
+margin-top:6px;
+margin-bottom:16px;
+}
+input[type=password],select, passwordarea{
+width:50%;
+padding:12px;
+border:1px solid #ccc;
+margin-top:6px;
+margin-bottom:16px;
+}
+input[type=radio],select,genderarea{
+width:auto:
+padding:12px;
+margin-top:6px;
+margin-bottom:16px;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 0px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body bgcolor="#E6E6FA">
+<div class="container">
+  <div style="text-align:center">
+
+<img src="login.png" alt="Avatar" class="avatar">
+<img src="login1.png" alt="Avatar" class="avatar" class="img">
+
+<p> Please Fill the fields to SignUp!</p>
+<hr>
+</div>
+<form action="/login_page.php">
+	First Name:
+	<input type="text" name="firstname" required ><br>
+	Last Name:
+	<input type="text" name="lastname"><br>
+	Email:
+	<input type="email" name="email" required ><br>
+	Ph No:
+	<input type="tel" name="phno" pattern="[0-9]{10}" required ><br>
+	Gender:
+	<input type="radio"name="gender" value="male"> Male
+	<input type="radio" name="gender" value="female"> Female 
+	<input type="radio" name="gender" value="Trans"> Transgender<br>
+	UserName:
+	<input type="text" name="username" required ><br>
+	Password:
+	<input type="password" name="passwd" required ><br>
+	Date of Birth:
+	<input type="date" name="DOB"><br>
+	<input type="submit" value="Submit">
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
